@@ -23,8 +23,11 @@ Software and hardware (inside the brackets are the components we used)
 ## Authors
 
 Samu Lyhty
+
 Topias Perälä
+
 Santeri Syrjälä
+
 Joonas Väyrynen
 
 ## Version History
