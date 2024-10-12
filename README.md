@@ -34,6 +34,9 @@ Joonas Väyrynen
 
 * 1.0
     * Full release of the working program
+
+* 0.1
+    * First stage versions of the modules
     
 ## License
 
