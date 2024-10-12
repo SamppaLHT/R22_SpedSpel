@@ -8,7 +8,8 @@ The game works by the software turning on a single randomized led on at a time, 
 
 ## Getting Started!
 
-![Vuokaavio](https://github.com/user-attachments/assets/67aa1c64-20ee-4006-9a6b-2ef6dad516b6)
+![Vuokaavio](https://github.com/user-attachments/assets/41eda644-629f-4765-82d3-1a8abe51559d)
+
 
 
 ### Dependencies
