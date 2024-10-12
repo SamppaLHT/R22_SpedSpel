@@ -6,7 +6,10 @@ SpedenSpelit is a simple reaction time related game.
 
 The game works by the software turning on a single randomized led on at a time, then it waits for a button press, the duration of the "active time" of the led. When correct button has been pressed within the approved timeframe, the game increments the current score on the 7-segment displays, continues to the second round and turns on the second randomized led. When the player has reached the score of 10, the game speeds up the "led active time" and the delay between leds by 10% and the game speeds up evey 10 successful rounds. If the player fails to press a button on time or presses the wrong button the game stops and score is then reset.
 
-## Getting Started
+## Getting Started!
+
+![Vuokaavio](https://github.com/user-attachments/assets/67aa1c64-20ee-4006-9a6b-2ef6dad516b6)
+
 
 ### Dependencies
 
