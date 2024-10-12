@@ -37,8 +37,8 @@ Joonas Väyrynen
 
 ## Version History
 
-* 1.0
-    * Full release of the working program  [Link to download](https://github.com/SamppaLHT/R22_SpedSpel/releases/tag/SpedenSpelit1.0)
+* 1.0   [Link to download](https://github.com/SamppaLHT/R22_SpedSpel/releases/tag/SpedenSpelit1.0)
+    * Full release of the working program  
 
 * 0.5
     * Reworks on gamelogic
