@@ -12,8 +12,6 @@ The game works by the software turning on a single randomized led on at a time, 
 
 ![SpedenSpelitV1](https://github.com/user-attachments/assets/de2763f6-4148-4605-86ec-7b75340bde7a)
 
-## Download
-[1.0 Full Release](https://github.com/SamppaLHT/R22_SpedSpel/releases/tag/SpedenSpelit1.0)
 
 ### Dependencies
 
@@ -40,7 +38,7 @@ Joonas Väyrynen
 ## Version History
 
 * 1.0
-    * Full release of the working program
+    * [Full release of the working program](https://github.com/SamppaLHT/R22_SpedSpel/releases/tag/SpedenSpelit1.0) Link to download
 
 * 0.5
     * Reworks on gamelogic
