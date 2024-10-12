@@ -33,7 +33,7 @@ Joonas Väyrynen
 ## Version History
 
 * 1.0
-    * Full release of the working product
+    * Full release of the working program
     
 ## License
 
