@@ -49,19 +49,15 @@ ISR(PCINT2_vect)
                       {
                           case 2:
                             buttonPresses[buttonIndex] = 0;
-                            Serial.println("Button 0 pressed");
                             break;
                           case 3:
                             buttonPresses[buttonIndex] = 1;
-                            Serial.println("Button 1 pressed");
                             break;
                           case 4:
                             buttonPresses[buttonIndex] = 2;
-                            Serial.println("Button 2 pressed");
                             break;
                           case 5:
                             buttonPresses[buttonIndex] = 3;
-                            Serial.println("Button 3 pressed");
                             break;
                           case 6:
                             gameStarted = true;
@@ -71,7 +67,6 @@ ISR(PCINT2_vect)
                             break;
                       }
                       buttonIndex++; 
-                      printButtonPresses();
                       clearAllLeds();
                   }
                   if (gameStarted && pin != 6) 
@@ -95,27 +90,3 @@ void resetButtonPresses()
   }
 }
 
-void printButtonPresses() 
-{
-    Serial.print("Button Presses: ");
-    bool hasPrinted = false;
-
-    for (int i = 0; i < 100; i++) 
-    {
-        if (buttonPresses[i] != -1) 
-        {
-            Serial.print(buttonPresses[i]);
-            hasPrinted = true;
-            if (i < 100 - 1) 
-            {
-                Serial.print(", ");
-            }
-        }
-    }
-    if (!hasPrinted) 
-    {
-        Serial.print("None");
-    }
-
-    Serial.println();
-}

@@ -23,7 +23,6 @@ void setup()
 
 void loop()
 {
-
 }
 
 void initializeTimer(void)
@@ -53,7 +52,6 @@ ISR(TIMER1_COMPA_vect)
     {
         if (!buttonWasPressed && ledIndex > 0)
         {
-          Serial.println("too late");
           stopTheGame();
           return;
         }
@@ -62,7 +60,6 @@ ISR(TIMER1_COMPA_vect)
         ledValues[ledIndex] = randomValue;
         setLed(ledValues[ledIndex]);
         ledIndex++;
-        printRandomValues();
     }
 }
 
@@ -109,7 +106,6 @@ void startTheGame()
   resetButtonPresses();
   result = 0;
   initializeTimer();
-  Serial.println("Game has started");
 }
 
 void stopTheGame()
@@ -121,21 +117,6 @@ void stopTheGame()
   clearAllLeds();
   resetLedValues();
   resetButtonPresses();
-  Serial.println("Game has stopped and interrupts are disabled");
-}
-
-void printRandomValues() 
-{
-    Serial.print("Random Values: ");
-    for (int i = 0; i < ledIndex; i++) 
-    {
-        Serial.print(ledValues[i]);
-        if (i < ledIndex - 1) 
-        {
-            Serial.print(", ");
-        }
-    }
-    Serial.println();
 }
 
 void resetLedValues()
