@@ -58,10 +58,12 @@ void writeTwoBytes(uint8_t digit1, uint8_t digit2)
     digitalWrite(latchClockPin, LOW);
 }
 
+
 void showResult()
 {
   if (gameStarted)
   {
+  result++;
   if (result > 99) 
   {
     return;

@@ -5,7 +5,6 @@
 #include <avr/interrupt.h>
 extern volatile bool gameStarted;
 extern uint8_t result;
-extern volatile byte ledNumber;
 
 void initializeTimer(void);
 
@@ -13,7 +12,7 @@ ISR(TIMER1_COMPA_vect);
 
 void initializeGame(void);
 
-void checkGame();
+void checkGame(byte);
 
 void startTheGame(void);
 

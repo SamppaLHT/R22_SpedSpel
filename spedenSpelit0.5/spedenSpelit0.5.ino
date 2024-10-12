@@ -5,10 +5,10 @@
 
 volatile uint8_t interruptCount = 0;
 float currentFrequency = 1.0;
-volatile int ledNumber = 0;
 extern volatile uint8_t buttonNumber;
 volatile bool gameStarted = false;
 uint8_t result = 0;
+volatile byte ledNumber = 0;
 
 void setup()
 {
@@ -20,13 +20,7 @@ void setup()
 
 void loop()
 {
-  ledNumber = random(0, 4);
-  setLed(ledNumber);
-  delay(2000);
-  checkGame();
-  clearAllLeds();
-  delay(500);
-  
+
 }
 
 void initializeTimer(void)
@@ -45,19 +39,30 @@ void initializeTimer(void)
 
   sei();
 }
-
+/*void setTimerFrequency(float frequency)
+{
+    // Calculate new compare match value (OCR1A)
+    uint16_t newOCR1A = (16000000 / (1024 * frequency)) - 1;
+    OCR1A = newOCR1A;
+}*/
 ISR(TIMER1_COMPA_vect)
 {
-
+  
 }
 
 void checkGame() {
     if (gameStarted) {
         if (ledNumber == buttonNumber) 
         {
-          showResult();  // Only show result if the game is running
+          result++;
+          clearAllLeds();
+          showResult();
+          delay(1000);
+          
+          ledNumber = random(0, 4);
+          setLed(ledNumber);
         } else {
-          stopTheGame(); // Call to stop the game on incorrect press
+          stopTheGame();
         }
     }
 }
@@ -69,7 +74,8 @@ void initializeGame()
 
 void startTheGame()
 {
-  result = 0; //timerin resetointi täytyy lisätä
+  result = 0;  //timerin resetointi täytyy lisätä
+  setLed(ledNumber);
   initializeGame();
   initializeTimer();
   Serial.println("Game has started");
