@@ -40,6 +40,12 @@ Joonas Väyrynen
 * 1.0
     * Full release of the working program
 
+* 0.5
+    * Reworks on gamelogic
+      
+* 0.3
+    * Introduced first bits of gamelogic
+
 * 0.1
     * First stage versions of the modules
     
