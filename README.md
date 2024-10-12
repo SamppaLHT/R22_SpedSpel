@@ -10,6 +10,7 @@ The game works by the software turning on a single randomized led on at a time, 
 
 ![Vuokaavio](https://github.com/user-attachments/assets/41eda644-629f-4765-82d3-1a8abe51559d)
 
+![SpedenSpelitV1](https://github.com/user-attachments/assets/de2763f6-4148-4605-86ec-7b75340bde7a)
 
 
 ### Dependencies
