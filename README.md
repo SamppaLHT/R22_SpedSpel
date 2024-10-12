@@ -31,7 +31,7 @@ Software and hardware (inside the brackets are the components we used)
 
 [Topias Perälä](https://github.com/saintcernunnos)
 
-Santeri Syrjälä
+[Santeri Syrjälä](https://github.com/sYrreee)
 
 Joonas Väyrynen
 
