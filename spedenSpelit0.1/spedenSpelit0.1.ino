@@ -3,15 +3,6 @@
 #include "leds.h"
 #include "SpedenSpelit.h"
 
-// Use these 2 volatile variables for communicating between
-// loop() function and interrupt handlers
-volatile int buttonNumber = -1;           // for buttons interrupt handler
-volatile bool newTimerInterrupt = false;  // for timer interrupt handler
-volatile bool generateRandom = false;
-volatile uint8_t interruptCount = 0;
-float currentFrequency = 1.0;
-
-
 void setup()
 {
   Serial.begin(9600);
@@ -41,30 +32,16 @@ void initializeTimer(void)
 
   sei();
 }
-void setTimerFrequency(float frequency)
-{
-    // Calculate new compare match value (OCR1A)
-    uint16_t newOCR1A = (16000000 / (1024 * frequency)) - 1;
-    OCR1A = newOCR1A;
-}
+
 ISR(TIMER1_COMPA_vect)
 {
-  generateRandom = true;
-  interruptCount++;
 
-  if (interruptCount > 0 && interruptCount % 10 == 0);
-  {
-    currentFrequency *= 1.1;
-    setTimerFrequency(currentFrequency);
-  }
 }
-
 
 void checkGame(byte nbrOfButtonPush)
 {
 
 }
-
 
 void initializeGame()
 {
@@ -73,9 +50,6 @@ void initializeGame()
 
 void startTheGame()
 {
-  initializeGame();
-  initializeTimer();
 
-  Serial.println("Game has started");
 }
 
