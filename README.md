@@ -26,9 +26,9 @@ Software and hardware (inside the brackets are the components we used)
 
 ## Authors
 
-Samu Lyhty
+[Samu Lyhty](https://github.com/SamppaLHT)
 
-Topias Perälä
+[Topias Perälä](https://github.com/saintcernunnos)
 
 Santeri Syrjälä
 
