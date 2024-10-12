@@ -16,6 +16,5 @@ void initButtonsAndButtonInterrupts(void);
 ISR(PCINT2_vect);
 
 void resetButtonPresses(void);
-void printButtonPresses(void);
 
 #endif
