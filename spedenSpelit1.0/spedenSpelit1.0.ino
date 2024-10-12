@@ -73,8 +73,6 @@ void speedUpGame()
 {
   currentFrequency *= 1.1;
   setTimerFrequency(currentFrequency);
-  Serial.print("Game speed increased! New frequency: ");
-  Serial.println(currentFrequency);
 }
 
 void checkGame() 
