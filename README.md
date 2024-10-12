@@ -33,7 +33,7 @@ Software and hardware (inside the brackets are the components we used)
 
 [Santeri Syrjälä](https://github.com/sYrreee)
 
-Joonas Väyrynen
+[Joonas Väyrynen](https://github.com/Joneezzi)
 
 ## Version History
 
