@@ -14,7 +14,6 @@ The core concept of the game is based on one of the four LEDs on the board turni
 
 ![Vuokaavio](https://github.com/user-attachments/assets/41eda644-629f-4765-82d3-1a8abe51559d)
 
-![SpedenSpelitV1](https://github.com/user-attachments/assets/de2763f6-4148-4605-86ec-7b75340bde7a)
 
 The user interface features four buttons directly under the four LEDs and a fifth button assigned to be a 'start button'. The game begins by pressing said start button.
 Upon pressing the start button, the game will light up the first LED. An interrupt service routine (ISR) generates a random value between the parameter of four numbers that determines which of the four LEDs will be turned on. 
@@ -30,7 +29,7 @@ If the checkGame determines the values to be the same, the program reads the but
 Upon pressing the correct button, the score display is updated and the next round begins. The aforementioned ISR timer tracks the user's correct button presses to determine the round count of the game, decreasing the allocated timeframe per round as outlined previously.
 The player can start a new game session at any point after the previous one ended by starting the game via the start button. The score input on the 7-segment display(s) and the tracked correct button presses along with the timeframe will be reset between game sessions.
 
-
+![SpedenSpelitV1](https://github.com/user-attachments/assets/de2763f6-4148-4605-86ec-7b75340bde7a)
 
 ### Dependencies
 
