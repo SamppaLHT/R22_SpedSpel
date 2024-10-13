@@ -73,7 +73,7 @@ Software and hardware (inside the brackets are the components used)
     
 ## License
 
-This project is licensed under the GNU GPLv3 License - see the LICENSE.txt file for details
+This project is licensed under the GNU GPLv3 License - see the [LICENSE.txt file](https://github.com/SamppaLHT/R22_SpedSpel/blob/main/LICENCE.txt) for details
 
 ## Acknowledgments
 
