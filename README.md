@@ -27,7 +27,7 @@ If the program receives a different value from the button press than it did from
 If the checkGame function determines the values to be the same, the program reads the button press to be the correct one and adds an increment to the user's score value. The updated score will be visible to the user as the checkGame function concludes by running the showResult function, which updates the 7-segment display(s) to show the current score of the player's game session.
 
 Upon pressing the correct button, the score display is updated and the next round begins. The aforementioned ISR timer tracks the user's correct button presses to determine the round count of the game, decreasing the allocated timeframe per round as outlined previously.
-The player can start a new game session at any point after the previous one ended by starting the game via the start button. The score input on the 7-segment display(s) and the tracked correct button presses along with the timeframe will be reset between game sessions.
+The player can start a new game session at any point after the previous one ended by starting the game via the start button. The score input on the 7-segment display(s) and the tracked correct button presses along with the timeframe duration of the round will be reset between game sessions.
 
 ![SpedenSpelitV1](https://github.com/user-attachments/assets/de2763f6-4148-4605-86ec-7b75340bde7a)
 
