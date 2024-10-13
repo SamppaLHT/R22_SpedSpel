@@ -24,7 +24,7 @@ Upon the LED lighthing up and simultaneously the timer for the concurrent round 
 If the player presses a button, the button press is registered by the program. Each of the buttons have an assigned value, and the game determines in the checkGame function whether or not the button pressed was the correct button by comparing the value of the button pressed to the value that ISR generated to turn on one of the LEDs. 
 
 If the program receives a different value from the button press than it did from the ISR's generated number corresponding to the LED of this round, then the program concludes the button press to be incorrect and subsequently runs the stopTheGame function to end the game session.
-If the checkGame function determines the values to be the same, the program reads the button press to be the correct one and adds an increment to the user's score value. The updated score will be visible to the user as the checkGame function concludes by running the showResult function, which updates the 7-segment display(s) to show the current score of the player's game session.
+If the checkGame function determines the values to be the same, the program reads the button press to be the correct one and adds an increment to the user's score value. The updated score will be visible to the user as the checkGame function concludes by running the showResult function, which updates the 7-segment display(s) to show the current score of the player's game session. The 7-segment display(s) are updated by sending a set binary value utilizing the serial-to-parallel shift register components.
 
 Upon pressing the correct button, the score display is updated and the next round begins. The aforementioned ISR timer tracks the user's correct button presses to determine the round count of the game, decreasing the allocated timeframe per round as outlined previously.
 The player can start a new game session at any point after the previous one ended by starting the game via the start button. The score input on the 7-segment display(s) and the tracked correct button presses along with the timeframe duration of the round will be reset between game sessions.
@@ -40,7 +40,7 @@ Software and hardware (inside the brackets are the components used)
 * 4x LED lights (HLMP-4740)
 * 4x pushbutton switches (ESE20C321)
 * 2x 7-segment displays (SC52-11EWA)
-* 2x Serial to parallel shift registers (SN74HC595N)
+* 2x serial-to-parallel shift registers (SN74HC595N)
 
 
 
