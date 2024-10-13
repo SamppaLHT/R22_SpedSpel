@@ -15,16 +15,16 @@ The core concept of the game is based on one of the four LEDs on the board turni
 ![Vuokaavio](https://github.com/user-attachments/assets/41eda644-629f-4765-82d3-1a8abe51559d)
 
 
-The user interface features four buttons directly under the four LEDs and a fifth button assigned to be a 'start button'. The game begins by pressing said start button.
+The user interface features four buttons directly under the four LEDs, a fifth button assigned to be a 'start button', as well as two 7-segment displays to track the player's progress. Pressing start button runs the startTheGame function and the game begins.
 Upon pressing the start button, the game will light up the first LED. An interrupt service routine (ISR) generates a random value between the parameter of four numbers that determines which of the four LEDs will be turned on. 
-The base speed of the game is set to operate on a 1Hz frequency, making the initial timeframe for the user to input the correct button press one second. The game speed is increased on every ten successful rounds by 10%, which then becomes the new timeframe for the affected rounds until the command to speed the game up is run again after another ten successful rounds. This timeframe of the round is started when the ISR turns on the LED.
+The base speed of the game is set to operate on a 1Hz frequency, making the initial timeframe for the user to input the correct button press a duration of one second. The game speed is increased on every ten successful rounds by 10%, which then becomes the new timeframe for the affected rounds until the command to speed the game up is run again after another ten successful rounds. This timeframe of the round is started when the ISR turns on the LED.
 
 
 Upon the LED lighthing up and simultaneously the timer for the concurrent round starting, the program now awaits for the user to play that round. If the player does not press any button at all within the timeframe of the round, the program will run the stopTheGame function and the game session will end.
 If the player presses a button, the button press is registered by the program. Each of the buttons have an assigned value, and the game determines in the checkGame function whether or not the button pressed was the correct button by comparing the value of the button pressed to the value that ISR generated to turn on one of the LEDs. 
 
 If the program receives a different value from the button press than it did from the ISR's generated number corresponding to the LED of this round, then the program concludes the button press to be incorrect and subsequently runs the stopTheGame function to end the game session.
-If the checkGame determines the values to be the same, the program reads the button press to be the correct one, updates the 7-segment display(s) to show the current result of the player's game session. The 7-segment display(s) are updated via the showResults function, which adds an increment to the score value displayed.
+If the checkGame function determines the values to be the same, the program reads the button press to be the correct one and adds an increment to the user's score value. The updated score will be visible to the user as the checkGame function concludes by running the showResult function, which updates the 7-segment display(s) to show the current score of the player's game session.
 
 Upon pressing the correct button, the score display is updated and the next round begins. The aforementioned ISR timer tracks the user's correct button presses to determine the round count of the game, decreasing the allocated timeframe per round as outlined previously.
 The player can start a new game session at any point after the previous one ended by starting the game via the start button. The score input on the 7-segment display(s) and the tracked correct button presses along with the timeframe will be reset between game sessions.
