@@ -15,7 +15,7 @@ The game works by the software turning on a single randomized led on at a time, 
 
 ### Dependencies
 
-Software and hardware (inside the brackets are the components we used)
+Software and hardware (inside the brackets are the components used)
 
 * Arduino IDE
 * Arduino UNO
@@ -38,16 +38,19 @@ Software and hardware (inside the brackets are the components we used)
 ## Version History
 
 * 1.0      [Link to download](https://github.com/SamppaLHT/R22_SpedSpel/releases/tag/SpedenSpelit1.0)
-    * Full release of the working program  
+    * Full release of the working program
+ 
+* 0.9
+    * Final test version with useful commands for debugging and testing individual features. Added ISR functions to support game logic and tie the program together as well as tidied up existing modules
 
 * 0.5
-    * Reworks on gamelogic
+    * First version of broadly working checkGame function and further reworks on existing modules to support it
       
 * 0.3
-    * Introduced first bits of gamelogic
+    * Reworks to display and buttons modules as well as first instances of game logic aimed at integrating the separate modules
 
 * 0.1
-    * First stage versions of the modules
+    * First stage versions of the modules and timer initialization
     
 ## License
 
