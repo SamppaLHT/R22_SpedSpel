@@ -2,21 +2,11 @@
 
 SpedenSpelit is a simple reaction time related game.
 
+
+
 ## Description
 
 The core concept of the game is based on one of the four LEDs on the board turning on and the player pressing the corresponding button to said LED within a decreasing timeframe. Each correct input by the user increases their score by 1 and progresses the game to the second round, while every tenth round speeds up the timeframe of the rounds by 10%. LEDs are turned on randomly, making this instance of SpedenSpelit strictly reaction-based. The player beats the game upon reaching the maximum score of 99 and loses the game by either pressing the wrong button or failing to input a button press within the timeframe.
-
-
-
-The user interface features four buttons directly under the four LEDs and a fifth button assigned to be a 'start button'. The game begins by pressing said start button.
-Upon pressing the start button, the game will light up the first LED. An interrupt service routine (ISR) generates a random value between the parameter of four numbers that determines which of the four LEDs will be turned on. The base speed of the game is set to operate on a 1Hz frequency, so the initial timeframe for the user to input the correct button press is one second. The game speed is increased on every ten successful rounds by 10%, which then becomes the new timeframe for the affected rounds until the command to speed the game up is run again after another ten successful rounds. This timeframe of the round is started when the ISR turns on the LED.
-
-Upon the LED lighthing up and simultaneously the timer for the concurrent round starting, the program now awaits for the user to play that round. If the player does not press any button at all within the timeframe of the round, the program will run the stopGame function and the game session will end.
-If the player presses a button, the button press is registered by the program. Each of the buttons have an assigned value and the game determines in the checkGame function whether or not the button pressed was the correct button by comparing the value of the button pressed to the value that ISR generated to turn on one of the LEDs. If the program receives a different value from the button press than it did from the ISR's generated number corresponding to the LED of this round, then the program concludes the button press to be incorrect and subsequently runs the stopGame function to end the game session.
-If the checkGame determines the values to be the same, the program reads the button press to be the correct one, updates the 7-segment display(s) to show the current result of the player's game session. The 7-segment display(s) are updated via the showResults function, which adds an increment to the score value displayed.
-
-Upon pressing the correct button, the score display is updated and the next round begins. The aforementioned ISR timer tracks the user's correct button presses to determine the round count of the game, decreasing the allocated timeframe per round as outlined previously.
-The player can start a new game session at any point after the previous one ended by starting the game via the start button. The score input on the 7-segment display(s) and the tracked correct button presses along with the timeframe will be reset between game sessions.
 
 
 
@@ -25,6 +15,21 @@ The player can start a new game session at any point after the previous one ende
 ![Vuokaavio](https://github.com/user-attachments/assets/41eda644-629f-4765-82d3-1a8abe51559d)
 
 ![SpedenSpelitV1](https://github.com/user-attachments/assets/de2763f6-4148-4605-86ec-7b75340bde7a)
+
+The user interface features four buttons directly under the four LEDs and a fifth button assigned to be a 'start button'. The game begins by pressing said start button.
+Upon pressing the start button, the game will light up the first LED. An interrupt service routine (ISR) generates a random value between the parameter of four numbers that determines which of the four LEDs will be turned on. 
+The base speed of the game is set to operate on a 1Hz frequency, making the initial timeframe for the user to input the correct button press one second. The game speed is increased on every ten successful rounds by 10%, which then becomes the new timeframe for the affected rounds until the command to speed the game up is run again after another ten successful rounds. This timeframe of the round is started when the ISR turns on the LED.
+
+
+Upon the LED lighthing up and simultaneously the timer for the concurrent round starting, the program now awaits for the user to play that round. If the player does not press any button at all within the timeframe of the round, the program will run the stopGame function and the game session will end.
+If the player presses a button, the button press is registered by the program. Each of the buttons have an assigned value, and the game determines in the checkGame function whether or not the button pressed was the correct button by comparing the value of the button pressed to the value that ISR generated to turn on one of the LEDs. 
+
+If the program receives a different value from the button press than it did from the ISR's generated number corresponding to the LED of this round, then the program concludes the button press to be incorrect and subsequently runs the stopGame function to end the game session.
+If the checkGame determines the values to be the same, the program reads the button press to be the correct one, updates the 7-segment display(s) to show the current result of the player's game session. The 7-segment display(s) are updated via the showResults function, which adds an increment to the score value displayed.
+
+Upon pressing the correct button, the score display is updated and the next round begins. The aforementioned ISR timer tracks the user's correct button presses to determine the round count of the game, decreasing the allocated timeframe per round as outlined previously.
+The player can start a new game session at any point after the previous one ended by starting the game via the start button. The score input on the 7-segment display(s) and the tracked correct button presses along with the timeframe will be reset between game sessions.
+
 
 
 ### Dependencies
@@ -37,6 +42,7 @@ Software and hardware (inside the brackets are the components used)
 * 4x pushbutton switches (ESE20C321)
 * 2x 7-segment displays (SC52-11EWA)
 * 2x Serial to parallel shift registers (SN74HC595N)
+
 
 
 ## Authors
@@ -64,7 +70,7 @@ Software and hardware (inside the brackets are the components used)
     * Reworks to display and buttons modules as well as first instances of game logic aimed at integrating the separate modules
 
 * 0.1
-    * First stage versions of the modules and timer initialization
+    * First versions of the modules and timer initialization
     
 ## License
 
