@@ -2,6 +2,7 @@
 
 SpedenSpelit is a simple reaction time related game.
 
+![Full build of project1 0](https://github.com/user-attachments/assets/1ddff81b-2782-489c-8c69-9f86c05aa5c2)
 
 
 ## Description
