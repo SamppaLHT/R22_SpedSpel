@@ -100,6 +100,7 @@ void checkGame()
 
 void startTheGame()
 {
+  clearDisplay();
   resetLedValues();
   resetButtonPresses();
   result = 0;
@@ -108,7 +109,6 @@ void startTheGame()
 
 void stopTheGame()
 {
-  clearDisplay();
   gameStarted = false;
   TIMSK1 &= ~(1 << OCIE1A);
   TCCR1B &= ~((1 << CS12) | (1 << CS10));
