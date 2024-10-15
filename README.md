@@ -16,7 +16,6 @@ The core concept of the game is based on one of the four LEDs on the board turni
 ![Vuokaavio](https://github.com/user-attachments/assets/41eda644-629f-4765-82d3-1a8abe51559d)
 
 
-![Full build of project1 0](https://github.com/user-attachments/assets/ddb56cba-ba5a-4194-90c5-3f93760964cb)
 
 
 The user interface features four buttons directly under the four LEDs, a fifth button assigned to be a 'start button', as well as two 7-segment displays to track the player's progress. Pressing start button runs the startTheGame function and the game begins.
@@ -34,6 +33,8 @@ Upon pressing the correct button, the score display is updated and the next roun
 The player can start a new game session at any point after the previous one ended by starting the game via the start button. The score input on the 7-segment display(s) and the tracked correct button presses along with the timeframe duration of the round will be reset between game sessions.
 
 ![SpedenSpelitV1](https://github.com/user-attachments/assets/de2763f6-4148-4605-86ec-7b75340bde7a)
+
+![Full build of project1 0](https://github.com/user-attachments/assets/ddb56cba-ba5a-4194-90c5-3f93760964cb)
 
 ### Dependencies
 
