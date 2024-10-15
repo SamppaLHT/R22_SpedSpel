@@ -2,7 +2,7 @@
 
 SpedenSpelit is a simple reaction time related game.
 
-![Full build of project1 0](https://github.com/user-attachments/assets/1ddff81b-2782-489c-8c69-9f86c05aa5c2)
+
 
 
 ## Description
@@ -14,6 +14,9 @@ The core concept of the game is based on one of the four LEDs on the board turni
 ## Overview
 
 ![Vuokaavio](https://github.com/user-attachments/assets/41eda644-629f-4765-82d3-1a8abe51559d)
+
+
+![Full build of project1 0](https://github.com/user-attachments/assets/ddb56cba-ba5a-4194-90c5-3f93760964cb)
 
 
 The user interface features four buttons directly under the four LEDs, a fifth button assigned to be a 'start button', as well as two 7-segment displays to track the player's progress. Pressing start button runs the startTheGame function and the game begins.
